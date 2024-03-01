@@ -1,0 +1,126 @@
+*{
+    font-family: 'Open Sans', sans-serif
+}
+body{
+    background: #d8d5cf;
+}
+.detail {
+    margin: 50px 300px 50px 300px;
+}
+.hot{
+    font-size: small;
+    font-weight: bold;
+    width: 60px;
+    color: aliceblue;
+    background: red;
+    text-align: center;
+    border-radius: 5px;
+}
+.col-md-7 h2{
+    font-size: 26px;
+    color: #0a0a0a;
+    text-align: inherit;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+}
+.avaiable{
+    color: whitesmoke;
+    background: #8f695c;
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: medium;
+}
+.price{
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+}
+.priceBox{
+    padding: 20px 10px;
+    border: 1px dashed black;
+    border-radius: 5px;
+    width: 60%;
+}
+.textDiv span{
+    font-family: tahoma, arial, helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.buynow{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 7px;
+}
+.amount{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #bf081f;;
+}
+.tb{
+    color: #444;
+    padding-left: 35px;
+    margin: 10px 0 !important;
+}
+ul li {
+    list-style-type: circle;
+
+}
+.tbContainer{
+    color: #cf0823;
+    text-align: justify;
+    line-height: 1.5em;
+    margin-top: 25px;
+    color: #008000;
+    font-family: tahoma, arial, helvetica, sans-serif;
+    line-height: 10px;
+    border: 1px dashed black;
+    border-radius: 5px;
+    width: 60%;
+}
+.tbContainer p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/*btnCart*/
+.btnCart{
+    margin-left: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    height: 35px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    background: #d8d5cf;
+    border-color: aqua;
+}
+.btnCart:hover{
+    transform:scale(1.1);
+}
+.btnCart a:hover{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.btnCart a:visited{
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.btnDetail a:link{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}

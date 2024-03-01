@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.formAddSub{
+    max-width: 550px;
+    width: 100%;
+    background: #fff;
+    margin: 50px auto;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.125);
+    padding: 30px;
+}
+
+.formAddSub .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #009879;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+}
+
+.formAddSub .form{
+    width: 100%;
+}
+
+.formAddSub .form .inputField{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.formAddSub .form .inputField label{
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.formAddSub .form .inputField .input{
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.buttonSub{
+    align-items: center;
+}
+.buttonSub button{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 0px;
+    background: #009879;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.buttonSub button:hover{
+    background: #0fbf9b;
+    transform: scale(1.0);
+}
+#back{
+    border: 0px;
+    border-radius: 3px;
+    outline: none;
+    background: #009879;
+}
+#back:hover{
+    transform: scale(1.1);
+}
+.formAddSub .form .inputField .selection{
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+.formAddSub .form .inputField .selection:before{
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #acc2bb transparent transparent transparent;
+    pointer-events: none;
+}
+.formAddSub .form .inputField .selection select{
+    -webkit-appearance: none;
+    -moz-appearance:   none;
+    appearance:        none;
+    outline: none;
+    width: 100%;
+    height: 45px;
+    border: 0px;
+    padding: 10px 11px 10px 12px;
+    margin-right: 2px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+}

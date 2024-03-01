@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.formAdd{
+    max-width: 550px;
+    width: 100%;
+    background: #fff;
+    margin: 50px auto;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.125);
+    padding: 30px;
+}
+.formAdd .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #009879;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+}
+.tb{
+    color: #444;
+    padding-left: 35px;
+    margin: 10px 0 !important;
+}
+ul li {
+    list-style-type: circle;
+
+}
+.detailInfoList{
+    color: #cf0823;
+    text-align: justify;
+    line-height: 1.5em;
+    margin-top: 25px;
+    color: #008000;
+    font-family: tahoma, arial, helvetica, sans-serif;
+    line-height: 10px;
+    border: 1px dashed black;
+    border-radius: 5px;
+    width: 100%;
+}
+.content-table-proInCate {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 17px;
+    min-width: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: inherit;
+}
+.content-table-proInCate thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+.content-table-proInCate th,
+.content-table-proInCate td {
+    padding: 12px 15px;
+}
+.content-table-proInCate tbody tr td a button {
+    width: 70px;
+    margin-bottom: 5px;
+}
+.content-table-proInCate tbody tr td a{
+    text-decoration: none;
+}
+.content-table-proInCate tbody tr {
+    border-bottom: 3px dashed #dbcaca;
+}
+
+.content-table-proInCate tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.content-table-proInCate tbody tr:nth-of-type(odd) {
+    background-color: #f3f3f3;
+}
+
+.content-table-proInCate tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table-proInCate tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}

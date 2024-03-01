@@ -1,0 +1,144 @@
+body{
+    background: #d8d5cf;
+}
+
+.allCard {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    margin-left: 250px;
+}
+.card_products{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    margin: 0px 20px 20px 0px;
+    height: fit-content;
+}
+.image{
+    width: 100%;
+}
+.price_container{
+    height: fit-content;
+    justify-content: flex-start;
+}
+.product_info {
+    height: 70px;
+    margin: 10px 15px 10px 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.title{
+    text-align: justify;
+    line-height: 20px;
+    font-size: 16px;
+    overflow: hidden;
+    font-weight: 600;
+    color: #382c29;
+    margin: 0px;
+}
+.desciption{
+    font-size: 13.5px;
+    overflow: hidden;
+}
+.price ins{
+    font-weight: 600;
+    font-size: 18px;
+    color: #e0795e;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.action{
+    margin-bottom: 15px;
+}
+.status{
+    color: #2cc067;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.btnDetail a:link{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.btnCart a:link{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.btnCart a:visited, .btnDetail a:visited{
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.btnCart a:hover, .btnDetail a:hover{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.btnCart, .btnDetail{
+    background-color: #d8d5cf;
+}
+.btnCart:hover{
+    transform:scale(1.2);
+}
+.btnDetail:hover{
+    transform:scale(1.2);
+}
+
+.sideBar{
+    user-select: none;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    background: #151515;
+    color: white;
+}
+.sideBar .text{
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+.sideBar ul{
+
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding-left: 0;
+}
+.sideBar ul li{
+    line-height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    padding-left: 20px;
+}
+.sideBar ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+}
+.sideBar ul li a:hover{
+    color: cyan;
+    background: #1e1e1e;
+}
+
+.sideBar ul ul{
+    position: static;
+}
+.sideBar ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+.sideBar ul ul li a{
+    font-size: 17px;
+    color: #e6e6e6;
+}
+
+/*----*/

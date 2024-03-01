@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="_layout"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" th:href="@{/css/cateDetail.css}">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" layout:fragment="content">
+    <div class="formAdd">
+        <div class="title">
+            <a th:href="'/admin/maincategory/list'">
+                <button class="btn btn-success" id="back" style="font-size: 15px; margin-right: 95px">Back</button>
+            </a>
+            CATEGORY DETAIL
+        </div>
+        <div class="detailsList">
+            <ul class="tb">
+                <li>
+                    <p><span style="font-size: 15px;" th:text="'ID: ' +${mainCategory.id}"></span></p>
+                </li>
+                <li>
+                    <p><span style="font-size: 15px;" th:text="'Category Name: ' +${mainCategory.name}"></span></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h2 style="color: #615c5c; font-size: 30px;">Children Category List</h2>
+    <table class="content-table-childCate">
+        <thead>
+        <tr>
+            <th style="width: fit-content">ID</th>
+            <th style="flex-grow: 1">Children Category Name</th>
+            <th style="flex-grow: 1">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${#lists.isEmpty(subCatList)}">
+            <td colspan="3"><i>no records!</i></td>
+        </tr>
+        <tr class="active-row" style="text-align: center;" th:each="cat: ${subCatList}">
+            <td th:text="${cat.id}" />
+            <td th:text="${cat.name}"></td>
+            <td>
+                <a th:href="'/admin/subcategory/detail/' + ${cat.id}" >
+                    <button class="btn btn-info">Detail</button>
+                </a>
+                <a th:href="'/admin/subcategory/update/' + ${cat.id}">
+                    <button class="btn btn-warning">Edit</button>
+                </a>
+                <a th:href="'/admin/subcategory/delete/' + ${cat.id}" onclick="return confirm('Do you want to delete this category ?');" >
+                    <button class="btn btn-danger">Delete</button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

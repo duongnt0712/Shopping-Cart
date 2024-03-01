@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.formAdd{
+    max-width: 550px;
+    width: 100%;
+    background: #fff;
+    margin: 50px auto;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.125);
+    padding: 30px;
+}
+
+.formAdd .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #009879;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+}
+
+
+.formAdd .form{
+    width: 100%;
+}
+
+.formAdd .form .inputField{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.formAdd .form .inputField label{
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.formAdd .form .inputField .input{
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.button{
+    display: flex;
+    align-items: center;
+}
+.button button{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 0px;
+    background: #009879;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 15px;
+}
+.button button:hover{
+    background: #0fbf9b;
+    transform: scale(1.0);
+}
+#back{
+    border: 0px;
+    border-radius: 3px;
+    outline: none;
+    background: #009879;
+}
+#back:hover{
+    transform: scale(1.1);
+}
