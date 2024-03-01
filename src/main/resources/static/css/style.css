@@ -11,18 +11,17 @@
 }
 body {
   width: 100%;
-  background-color: #eaeaea !important;
+  background-color: #eeeeee !important;
 }
 .nav-one p {
   font-family: "Righteous", cursive;
-  font-size: 25px;
+  font-size: 22px;
   color: #151515;
 }
 .nav-one a {
   font-family: "Righteous", cursive;
-  margin-left: 35px;
   float: left;
-  font-size: 25px;
+  font-size: 22px;
   text-decoration: none;
   color: #1e1e1e;
   display: inline-block;
@@ -31,13 +30,16 @@ body {
 .nav-one {
   background: #ffffff;
   width: 100%;
-  padding: 30px;
+  padding: 15px 0;
   overflow: auto;
 }
+.nav-one-menu a {
+    margin-left: 30px;
+}
+
 .logo1 img {
   max-width: 40%;
-  max-height: 15%;
-  position: absolute;
+  max-height: 20%;
 }
 .middle {
   margin-left: 500px;
@@ -63,33 +65,17 @@ ul {
 .container2 {
   max-width: 100%;
 }
-.container {
-  justify-content: center;
-  max-width: 100%;
-  margin: auto;
-}
-.footer-col h4 {
-  font-size: 22px;
-  color: azure;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-  font-weight: 500;
-  position: relative;
-}
-
 .special {
   color: #ffffff;
   width: 100%;
-  margin-left: 20px;
 }
 .special h1 {
-  width: 100%;
-  font-size: 50px;
+  font-size: 30px;
 }
 .special h2 {
-  position: relative;
+  font-size: 20px;
   margin-bottom: 10px;
-  width: 35%;
+  font-family: "Rammetto One", cursive;
 }
 .special h2::before {
   content: "";
@@ -101,13 +87,14 @@ ul {
   box-sizing: border-box;
   width: 100%;
 }
-.special input {
+.special #email_input {
+  width: 60%;
   height: 40px;
-  width: 500px;
-  max-width: 100%;
 }
 .special .submit {
-  background-color: #2e3440;
+  width: 20%;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
   text-decoration: none;
   color: #bbbbbb;
   font-size: 20px;
@@ -118,27 +105,26 @@ ul {
 .special p {
   font-family: "Raleway", sans-serif;
   color: #f7f7f7;
-  font-size: larger;
 }
 .submit:hover {
   background-color: #bbbbbb;
   color: black;
 }
-
-.row2 {
-  margin-left: 10px;
+.subscription-email{
+  max-width: 80%
   display: flex;
 }
-
-.row2:not(:first-child) {
-  margin-left: 20px;
-}
 .footer-col {
-  width: 40%;
-  padding: 0 20px;
+  width: 30%;
+  padding-left: 32px;
 }
-.special h2 {
-  font-family: "Rammetto One", cursive;
+.footer-col h4 {
+  font-size: 20px;
+  color: azure;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
 }
 .footer-col h4::before {
   content: "";
@@ -148,7 +134,10 @@ ul {
   background-color: #e91e63;
   height: 1px;
   box-sizing: border-box;
-  width: 50px;
+  width: 50%;
+}
+.footer-col ul {
+  padding-left: 0px;
 }
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
@@ -169,34 +158,30 @@ ul {
   margin-top: 20px;
 }
 .copy-right h3 {
-  position: absolute;
   color: #ffffff;
   font-style: italic;
-  margin-left: 10px;
+  font-size: 16px;
 }
 
-.nav-second ul {
-  margin-right: 10%;
+.nav-second ul, .nav-second p {
+  margin-bottom: 0px;
 }
 .nav-second {
   background-color: #131313;
-  width: 100%;
-  padding: 12px;
+  padding: 15px 0;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 .nav-second h1 {
-  padding: 0 10px;
   color: #ececec;
-  font-size: 35px;
+  font-size: 30px;
   font-family: "Rammetto One", cursive;
 }
 .nav-second p {
   font-family: "Raleway", sans-serif;
   color: #ececec;
-
   font-size: 15px;
 }
 
@@ -208,7 +193,7 @@ ul {
   font-family: "Righteous", cursive;
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 22px;
   display: inline-block;
   position: relative;
   color: #ececec;
@@ -319,7 +304,6 @@ ul {
   color:white;
   border-radius: 25px;
   transition: 0.25s;
-
 }
 .login-container input[type="email"]:focus, .login-container input[type="password"]:focus, .login-container input[type="text"]:focus{
   width:70%;
@@ -353,7 +337,7 @@ ul {
   margin-top: 0px;
   margin-bottom: 60px;
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 900;
   color: #121212;
@@ -430,3 +414,19 @@ a.test {
 .third-service:hover .service-icon {
   background-image: url(../images/trainers_color.png);
 }
+
+.container3 {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.content-slider h3 {
+  margin: 0;
+  padding: 70px 0;
+}
+

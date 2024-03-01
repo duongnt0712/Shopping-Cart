@@ -1060,17 +1060,3 @@
   -webkit-animation-delay: 4s;
   animation-delay: 4s;
 }
-
-/* Base Styling */
-
-.container3 {
-  height: 100%;
-  position: absolute;
-  top: 20%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
