@@ -60,15 +60,14 @@ public class UserController {
     public String getCategoryAndProduct(Model model){
         List<Product> products = productRepository.findAll();
         List<MainCategory> mainCategories = mainCategoryRepository.findAll();
-        List<Map<MainCategory, List<SubCategory>>> ListCat = new ArrayList<Map<MainCategory, List<SubCategory>>>();
-        for (MainCategory m:
-                mainCategories ) {
-            ListCat.add(new HashMap<MainCategory, List<SubCategory>>(){{
+        List<Map<MainCategory, List<SubCategory>>> listCat = new ArrayList<Map<MainCategory, List<SubCategory>>>();
+        for (MainCategory m: mainCategories ) {
+            listCat.add(new HashMap<MainCategory, List<SubCategory>>(){{
                 put(m,subCategoryRepository.findByMainCategoryEquals(m));
             }});
         }
         model.addAttribute("products", products);
-        model.addAttribute("ListCat", ListCat);
+        model.addAttribute("ListCat", listCat);
         model.addAttribute("cartCount", GlobalData.cart.size());
         return "shop";
     }
