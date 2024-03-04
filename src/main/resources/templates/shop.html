@@ -3,11 +3,12 @@
 <head>
     <link rel="stylesheet" th:href="@{/css/shop.css}">
 </head>
-<body>
-    <main class="container" layout:fragment="content" style="display: flex; justify-content: space-between;">
+<body layout:fragment="content">
+    <section class="bread-crumb">
+        <div class="container">Home / Shop / All Product</div>
+    </section>
+    <main class="container wrap-background" style="display: flex; justify-content: space-between;">
         <nav class="side-bar">
-            <div class="text">Categories</div>
-            <hr/>
             <ul class="category">
                 <li class="sub-cate-name"><a th:href="@{/shop}">All Products</a></li>
                 <li th:each="mainCat : ${ListCat}">
@@ -25,45 +26,47 @@
             </ul>
         </nav>
         <div class="allCard">
-            <h1>Our Products</h1>
-            <div class="product-grid">
-                <div class="card_products" th:each="product : ${products}">
-                    <img class="image" th:alt="${product.productName}"
-                         th:src="@{${'/images/' + product.imageName}}" width="300px"/>
-                    <div class="product_info">
-                        <p class="title" th:text="${product.productName}"></p>
-                        <p class="description" th:text="${product.description}"></p>
-                    </div>
-                    <div class="price_container">
-                        <span class="price">
-                            <span class="elecho-price" style="position: relative;">
-                                <ins>
-                                    <span class="amount">
-                                        <bdi th:text="'Price: '+${product.convert(product.price)}+'₫'">
-                                        </bdi>
-                                    </span>
-                                </ins>
+            <h1 class="title-page">Title</h1>
+            <section class="row products-view-grid">
+                <div class="col-4 card-product-wrapper" th:each="product : ${products}">
+                    <div class="card-product">
+                        <img class="image" th:alt="${product.productName}"
+                             th:src="@{${'/images/' + product.imageName}}" width="300px"/>
+                        <div class="product_info">
+                            <p class="title" th:text="${product.productName}"></p>
+                            <p class="description" th:text="${product.description}"></p>
+                        </div>
+                        <div class="price_container">
+                            <span class="price">
+                                <span class="elecho-price" style="position: relative;">
+                                    <ins>
+                                        <span class="amount">
+                                            <bdi th:text="'Price: '+${product.convert(product.price)}+'₫'">
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </span>
                             </span>
-                        </span>
-                    </div>
-                    <div class="action" style="display: flex;">
-                        <span class="status" style="width: 50%">
-                        <i class="fa fa-check"></i>
-                            In stock
-                        </span>
-                        <div style="justify-content: space-between; width: 70%; display: flex; padding: 0px 20px">
-                        <button class="btnCart" style="margin-right: 3px;border-radius: 10px;padding: 3px">
-                            <a style="text-decoration: none" th:href="@{/addToCart/{id}(id = ${product.productId})}">Add <i
-                                    class="fas fa-cart-plus" style="font-size: 20px"> </i></a>
-                        </button>
-                        <button class="btnDetail" style="border-radius: 10px;padding: 3px">
-                            <a style="text-decoration: none" th:href="'/shop/viewproduct/' + ${product.productId}">Detail <i
-                                    class="fa-solid fa-circle-info" style="font-size: 20px"></i></a>
-                        </button>
+                        </div>
+                        <div class="action" style="display: flex;">
+                            <span class="status" style="width: 50%">
+                            <i class="fa fa-check"></i>
+                                In stock
+                            </span>
+                            <div style="justify-content: space-between; width: 70%; display: flex; padding: 0px 20px">
+                            <button class="btnCart" style="margin-right: 3px;border-radius: 10px;padding: 3px">
+                                <a style="text-decoration: none" th:href="@{/addToCart/{id}(id = ${product.productId})}">Add <i
+                                        class="fas fa-cart-plus" style="font-size: 20px"> </i></a>
+                            </button>
+                            <button class="btnDetail" style="border-radius: 10px;padding: 3px">
+                                <a style="text-decoration: none" th:href="'/shop/viewproduct/' + ${product.productId}">Detail <i
+                                        class="fa-solid fa-circle-info" style="font-size: 20px"></i></a>
+                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
     <script type="text/javascript">

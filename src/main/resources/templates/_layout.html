@@ -61,6 +61,65 @@
             </ul>
         </div>
     </nav>
+
     <div layout:fragment="content"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between;">
+                <div class="special">
+                    <h2>H-FASHION</h2>
+                    <p>Address: Km9, Nguyen Trai Street, Nam Tu Liem District, Hanoi City</p>
+                    <p>Tel: +84 912 783 623</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a th:href="@{/shop}">Shop</a></li>
+                            <li><a th:href="@{/cart}">Cart</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a th:href="@{/comingsoon}">About Us</a></li>
+                            <li><a th:href="@{/comingsoon}">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a th:href="@{/comingsoon}">Contact Us</a></li>
+                            <li><a th:href="@{/comingsoon}">Refund</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="subscription">
+                <div class="email">
+                    <h4>Newsletter</h4>
+                    <p>Enter email for our latest news and promos. Chance to win free coupons.</p>
+                    <div class="subscription-email">
+                        <input type="email" id="email_input" placeholder="  Email address"/>
+                        <input type="submit" class="submit" value="Send"/>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a th:href="@{/comingsoon}"><i class="fa-brands fa-facebook"></i></a>
+                        <a th:href="@{/comingsoon}"><i class="fa-brands fa-instagram"></i></a>
+                        <a th:href="@{/comingsoon}"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a th:href="@{/comingsoon}"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="copy-right">
+                <p>Copyright © 2024 All rights reserved | SE2 Project</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

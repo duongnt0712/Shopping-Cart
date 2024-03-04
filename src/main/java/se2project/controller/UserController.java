@@ -86,8 +86,7 @@ public class UserController {
         List<Product> products = new ArrayList<>();
         MainCategory mainCategory = mainCategoryRepository.findMainCategoryByName(name);
         List<SubCategory> subCategoryList = subCategoryRepository.findByMainCategoryEquals(mainCategory);
-        for (SubCategory subCat:
-             subCategoryList) {
+        for (SubCategory subCat: subCategoryList) {
             products.addAll(productRepository.findBySubCategoryEquals(subCat));
         }
         model.addAttribute("products", products);
@@ -98,8 +97,7 @@ public class UserController {
     public String filterBySubcategory(Model model, @PathVariable(value = "id") Long id ){
         List<MainCategory> mainCategoryList = mainCategoryRepository.findAll();
         List<Map<MainCategory, List<SubCategory>>> ListCat = new ArrayList<Map<MainCategory, List<SubCategory>>>();
-        for (MainCategory m:
-                mainCategoryList ) {
+        for (MainCategory m: mainCategoryList ) {
             ListCat.add(new HashMap<MainCategory, List<SubCategory>>(){{
                 put(m,subCategoryRepository.findByMainCategoryEquals(m));
             }});

@@ -11,7 +11,7 @@
 }
 body {
   width: 100%;
-  background-color: #fff !important;
+  background-color: #fff;
 }
 .nav-one {
   background: #ffffff;
@@ -95,7 +95,7 @@ ul {
 }
 .special h2 {
   color: #d8bf9f;
-  font-size: 25px;
+  font-size: 30px;
   margin-bottom: 10px;
   font-family: "Rammetto One", cursive;
 }
@@ -180,7 +180,7 @@ ul {
 }
 .nav-second h1 {
   color: #d8bf9f;
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 0;
   font-family: "Rammetto One", cursive;
 }
@@ -340,28 +340,30 @@ ul {
   height: 20px;
 }
 .services {
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin: 80px 0;
 }
 .section-heading h2 {
   margin-top: 0px;
   margin-bottom: 60px;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   text-transform: uppercase;
   font-weight: 900;
 }
-.services .service-item {
+.service-item {
   color: black;
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0.2);
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
   padding: 60px 30px 20px 30px;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .service-item:hover {
   color: black;
+  box-shadow: none;
   background-color: #d8bf9f;
   border: 1px solid #d8bf9f;
 }
