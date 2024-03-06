@@ -22,93 +22,68 @@ body{
 .products-view-grid {
     margin: -8px -8px 0 -8px;
     padding-bottom: 16px;
-    display: flex;
-    flex-wrap: wrap;
 }
 .card-product-wrapper {
     padding: 8px;
 }
 .card-product {
-    border: 1px solid #bbbbbb;
-    overflow: hidden;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
-    height: fit-content;
-    padding: 0;
     transition: all 0.3s;
+    overflow: hidden;
 }
 .card-product:hover {
     box-shadow: none;
 }
-.image{
-    width: 100%;
-    height: 300px;
+.card-title {
+   flex: 1;
 }
-.price_container {
-    height: fit-content;
-    justify-content: flex-start;
+.card-title {
+    font-size: 18px;
 }
-.product_info {
-    height: 70px;
-    margin: 10px 15px 10px 15px;
-    font-family: 'Open Sans', sans-serif;
+.card-title > a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
 }
-.title {
-    text-align: justify;
-    line-height: 20px;
-    font-size: 16px;
-    overflow: hidden;
-    font-weight: 600;
-    color: #382c29;
-    margin: 0px;
+.card-title > a:hover {
+    color: #d8bf9f;
 }
-.description {
-    font-size: 13.5px;
-    overflow: hidden;
+.card-text {
+    font-size: 14px;
 }
-.price ins{
+.card-bottom {
+    border-top: 1px solid #bbb;
+}
+.price {
     font-weight: 600;
     font-size: 18px;
     color: #e0795e;
     text-decoration: none;
-    margin-left: 15px;
-}
-.action{
-    margin-bottom: 15px;
+    margin-top: 16px;
 }
 .status{
     color: #2cc067;
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 10px;
-}
-.btnDetail a:link{
-    color:black;
-    background-color: transparent;
-    text-decoration: none;
+    font-size: 14px;
 }
 .btnCart a:link{
     color:black;
     background-color: transparent;
     text-decoration: none;
 }
-.btnCart a:visited, .btnDetail a:visited{
+.btnCart a:visited{
     color: black;
     background-color: transparent;
     text-decoration: none;
 }
-
-.btnCart a:hover, .btnDetail a:hover{
+.btnCart a:hover{
     color: red;
     background-color: transparent;
     text-decoration: underline;
 }
-.btnCart, .btnDetail{
+.btnCart {
     background-color: #d8d5cf;
 }
 .btnCart:hover{
-    transform:scale(1.2);
-}
-.btnDetail:hover {
     transform:scale(1.2);
 }
 .side-bar {
