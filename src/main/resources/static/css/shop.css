@@ -46,6 +46,7 @@ body{
     transition: all 0.3s;
 }
 .card-title > a:hover {
+    text-decoration: none;
     color: #d8bf9f;
 }
 .card-text {
@@ -61,30 +62,34 @@ body{
     text-decoration: none;
     margin-top: 16px;
 }
-.status{
+.stock{
     color: #2cc067;
     font-size: 14px;
 }
-.btnCart a:link{
+.btnCart a {
     color:black;
     background-color: transparent;
     text-decoration: none;
+    transition: all 0.3s;
 }
-.btnCart a:visited{
+.btnCart a:visited {
     color: black;
     background-color: transparent;
     text-decoration: none;
 }
-.btnCart a:hover{
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
+.btnCart a:hover {
+    color: black;
+    text-decoration: none;
 }
 .btnCart {
-    background-color: #d8d5cf;
+    background-color: #d8bf9f!important;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
 }
-.btnCart:hover{
-    transform:scale(1.2);
+.btnCart:hover {
+    color: white;
+    background-color: #bbbbbb!important;
 }
 .side-bar {
     font-family: 'Open Sans', sans-serif;

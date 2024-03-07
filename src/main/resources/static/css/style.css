@@ -14,7 +14,7 @@ body {
   background-color: #fff;
 }
 .nav-one {
-  background: #ffffff;
+  background: #fff;
   width: 100%;
   overflow: auto;
   padding: 10px 0;
@@ -45,7 +45,7 @@ body {
   margin-bottom: 0;
 }
 .nav-one a:hover {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 .nav-one a:after {
@@ -70,9 +70,6 @@ body {
 }
 .middle {
   margin-left: 500px;
-}
-.right {
-
 }
 .form-title {
   text-align: center;
@@ -484,5 +481,17 @@ ul {
   height: 1px;
   box-sizing: border-box;
   width: 70%;
+}
+.card-title {
+    font-size: 18px;
+}
+.card-title > a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
+}
+.card-title > a:hover {
+    text-decoration: none;
+    color: #d8bf9f;
 }
 
