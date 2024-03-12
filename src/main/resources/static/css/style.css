@@ -11,6 +11,7 @@
 }
 body {
   width: 100%;
+  height:100%;
   background-color: #fff;
 }
 .nav-one {
@@ -283,10 +284,10 @@ ul {
   text-align: center;
 }
 .login-container h2 {
-  padding-top: 20px;
+  padding-top: 56px;
   text-transform: uppercase;
   font-weight: bolder;
-  margin-bottom: 32px;
+  margin-bottom: 56px;
 }
 .login-container input[type="email"], .login-container input[type="password"],.login-container input[type="text"]{
   border: 0;
@@ -328,8 +329,8 @@ ul {
   background: #4e4e4e;
   border-color: #4e4e4e;
 }
-.login-container h4 {
-    margin-bottom: 24px;
+.login-container h5 {
+    margin: 24px auto;
 }
 .checkboxx input,
 .checkboxx a {
@@ -494,4 +495,41 @@ ul {
     text-decoration: none;
     color: #d8bf9f;
 }
-
+.min-vh-75 {
+    min-height: 75vh !important;
+}
+.jumbotron {
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #d8bf9f;
+}
+.jumbotron h1,
+.jumbotron .h1 {
+    color: inherit;
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+.jumbotron > hr {
+    border-top-color: #d5d5d5;
+}
+.container .jumbotron,
+.container-fluid .jumbotron {
+    border-radius: 6px;
+}
+.jumbotron .container {
+    max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .container .jumbotron,
+    .container-fluid .jumbotron {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    .jumbotron h1,
+    .jumbotron .h1 {
+        font-size: 63px;
+    }
+}

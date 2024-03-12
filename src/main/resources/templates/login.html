@@ -1,23 +1,20 @@
 <!doctype html>
 <html lang="en" layout:decorate="_layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <body layout:fragment="content" style="background: #f4f4f4">
-    <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+    <div class="container min-vh-75 d-flex justify-content-center">
         <div class="login-container" >
             <h2>Login</h2>
             <form th:action="@{/login}" method="post">
-                <input type="email" name="email" id="email" placeholder="Your Email" >
-                <input type="password"  placeholder="Password" name="password" id="password">
+                <input type="email" name="email" id="email" placeholder="Email" >
+                <input type="password" name="password" id="password" placeholder="Password">
                 <div th:if="${param.error}" class="alert alert-error text-danger">
                     Invalid username or password.
                 </div>
                 <input type="submit" value="Login">
                 <span>Don't have an account? <a href="./register.html" th:href="@{/register}" style="color: #d8bf9f">Register here</a></span>
-                <hr>
-                <h4>Sign in with other platforms</h4>
+                <hr/>
+                <h5>Or Sign In With</h5>
                 <div class="social-links" style="padding-bottom: 20px">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
                     <a th:href="@{/oauth2/authorization/google}"><i class="fa-brands fa-google"></i></a>
                 </div>
             </form>
