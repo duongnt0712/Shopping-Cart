@@ -69,7 +69,7 @@ body {
     background: #131313;
     color: white;
 }
-.formAddPro .form .inputField .selection{
+.formAddPro .form .inputField .selection, .formAddPro .form .inputField .check-box{
     position: relative;
     width: 100%;
     height: 40px;

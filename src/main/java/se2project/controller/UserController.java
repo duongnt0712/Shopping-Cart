@@ -32,15 +32,12 @@ public class UserController {
 
     @GetMapping(value = {"/", "/home"})
     public String home(Model model) {
-
-
         List<MainCategory> mainCategories = mainCategoryRepository.findAll();
         model.addAttribute("ListCat", mainCategories);
         List<Product> products = new ArrayList<>();
         MainCategory mainCategory = mainCategoryRepository.findMainCategoryByName("OTHERS");
         List<SubCategory> subCategories = subCategoryRepository.findByMainCategoryEquals(mainCategory);
-        for (SubCategory subCat:
-                subCategories) {
+        for (SubCategory subCat : subCategories) {
             products.addAll(productRepository.findBySubCategoryEquals(subCat));
         }
         model.addAttribute("products", products);
@@ -74,27 +71,27 @@ public class UserController {
     @GetMapping(value = "/shop/maincategory/{name}")
     public String filterByMaincategory(Model model, @PathVariable(value = "name") String name){
         List<MainCategory> mainCategoryList = mainCategoryRepository.findAll();
-
         List<Map<MainCategory, List<SubCategory>>> ListCat = new ArrayList<Map<MainCategory, List<SubCategory>>>();
-        for (MainCategory m:
-                mainCategoryList ) {
+        for (MainCategory m : mainCategoryList ) {
             ListCat.add(new HashMap<MainCategory, List<SubCategory>>(){{
                 put(m,subCategoryRepository.findByMainCategoryEquals(m));
             }});
         }
-        model.addAttribute("ListCat", ListCat);
         List<Product> products = new ArrayList<>();
         MainCategory mainCategory = mainCategoryRepository.findMainCategoryByName(name);
         List<SubCategory> subCategoryList = subCategoryRepository.findByMainCategoryEquals(mainCategory);
         for (SubCategory subCat: subCategoryList) {
             products.addAll(productRepository.findBySubCategoryEquals(subCat));
         }
+
+        model.addAttribute("ListCat", ListCat);
         model.addAttribute("products", products);
         model.addAttribute("cartCount", GlobalData.cart.size());
         return "shop";
     }
     @GetMapping(value = "/shop/subcategory/{id}")
     public String filterBySubcategory(Model model, @PathVariable(value = "id") Long id ){
+        List<Product> products = productRepository.findBySubCategoryEquals(subCategoryRepository.findSubCategoryById(id));
         List<MainCategory> mainCategoryList = mainCategoryRepository.findAll();
         List<Map<MainCategory, List<SubCategory>>> ListCat = new ArrayList<Map<MainCategory, List<SubCategory>>>();
         for (MainCategory m: mainCategoryList ) {
@@ -102,9 +99,8 @@ public class UserController {
                 put(m,subCategoryRepository.findByMainCategoryEquals(m));
             }});
         }
-        model.addAttribute("ListCat", ListCat);
-        List<Product> products = productRepository.findBySubCategoryEquals(subCategoryRepository.findSubCategoryById(id));
 
+        model.addAttribute("ListCat", ListCat);
         model.addAttribute("products", products);
         model.addAttribute("cartCount", GlobalData.cart.size());
         return "shop";

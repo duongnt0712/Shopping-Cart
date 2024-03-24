@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="_layout" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/productAdd.css}">
+</head>
+<body layout:fragment="content" style="background: #f4f4f4;">
+    <div class="min-vh-65">
+        <section class="bread-crumb">
+            <div class="container">
+                <span><a th:href="'/admin'">Home</a> / </span>
+                <span><a th:href="'/admin/user/list'">User List</a> / </span>
+                Update User</div>
+        </section>
+        <div class="container">
+            <div class="formAddPro" style="background: white; padding: 30px;">
+                <div class="title">
+                    <a th:href="'/admin/user/list'">
+                        <button class="btn btn-checkout" style="margin-right: 95px">Back</button>
+                    </a>
+                    EDIT USER
+                </div>
+                <form class="form" method="post" th:action="'/admin/user/save'" th:object="${user}">
+                    <input name="id" th:field="*{id}" type="hidden">
+                    <div class="inputField">
+                        <label for="first-name">First Name</label>
+                        <input class="input" id="first-name" name="first-name" required th:field="*{firstName}" type="text">
+                    </div>
+                    <div class="inputField">
+                        <label for="last-name">Last Name</label>
+                        <input class="input" id="last-name" name="last-name" required th:field="*{lastName}" type="text">
+                    </div>
+                    <div class="inputField">
+                        <label for="email">Email</label>
+                        <input class="input" id="email" name="email" required th:field="*{email}" type="text">
+                    </div>
+                    <div class="buttonProAdd">
+                        <button type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

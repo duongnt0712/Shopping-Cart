@@ -14,6 +14,7 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product, Long> {
     //relative search
     Page<Product> findByProductNameContaining (String productName, Pageable pageable);
+    Page<Product> findAllByOrderByProductIdDesc(Pageable pageable);
     Page<Product> findAllByOrderByPriceAsc(Pageable pageable);
     Page<Product> findAllByOrderByPriceDesc(Pageable pageable);
     Page<Product> findAllByOrderByProductNameAsc(Pageable pageable);

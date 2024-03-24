@@ -9,6 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MainCategoryRepository extends JpaRepository<MainCategory, Long> {
     Page<MainCategory> findByNameContaining(String name, Pageable pageable);
+    Page<MainCategory> findMainCategoryByOrderByIdDesc(Pageable pageable);
     MainCategory findMainCategoryByName(String name);
-    MainCategory findMainCategoryById(Long id);
 }

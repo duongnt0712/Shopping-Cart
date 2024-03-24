@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" layout:decorate="_layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <body layout:fragment="content" style="background: #f4f4f4;">
-    <div class="container min-vh-75 text-center" style="background: white;">
+    <div class="container min-vh-75 text-center mt-3 mb-3 pt-3" style="background: white;">
         <div class="jumbotron text-center">
             <h1 class="display-4">Welcome back, Admin</h1>
             <p>Easily manage your data from this admin <mark>CMS</mark></p>
@@ -13,7 +13,7 @@
                         <div class="card-body">
                             <h4 class="card-title" style="color: #d8bf9f; text-transform: uppercase;">Main Categories</h4>
                             <p class="card-text">Manage the categories section here.</p>
-                            <a href="#" th:href="'/admin/maincategory/list'" class="card-link btn btn-checkout">Manage</a>
+                            <a th:href="'/admin/maincategory/list'" class="card-link btn btn-checkout">Manage</a>
 
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                         <div class="card-body">
                             <h4 class="card-title" style="color: #d8bf9f; text-transform: uppercase;">Sub Categories</h4>
                             <p class="card-text">Manage the sub categories section here.</p>
-                            <a href="#" th:href="'/admin/subcategory/list'" class="card-link btn btn-checkout">Manage</a>
+                            <a th:href="'/admin/subcategory/list'" class="card-link btn btn-checkout">Manage</a>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,16 @@
                         <div class="card-body">
                             <h4 class="card-title" style="color: #d8bf9f; text-transform: uppercase;">Products</h4>
                             <p class="card-text">Manage all the products here.</p>
-                            <a href="#"  th:href="'/admin/product/list'" class="card-link btn btn-checkout">Manage</a>
+                            <a th:href="'/admin/product/list'" class="card-link btn btn-checkout">Manage</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 pt-3" >
+                    <div class="card" style="background-color:white;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #d8bf9f; text-transform: uppercase;">Users</h4>
+                            <p class="card-text">Manage all the users in the system.</p>
+                            <a th:href="'/admin/user/list'" class="card-link btn btn-checkout">Manage</a>
                         </div>
                     </div>
                 </div>
