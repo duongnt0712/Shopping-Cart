@@ -54,6 +54,7 @@ public class CartController {
         DecimalFormat formatter = new DecimalFormat("###,###,###");
 
         model.addAttribute("total", formatter.format(amount));
+        model.addAttribute("cartCount", GlobalData.cart.size());
         return  "checkout";
     }
 }

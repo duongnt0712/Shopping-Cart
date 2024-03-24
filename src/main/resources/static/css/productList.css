@@ -1,4 +1,10 @@
-    .content-table {
+.product-list {
+    padding: 30px;
+}
+h2 a:hover {
+    color: #d8bf9f;
+}
+.content-table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 17px;
@@ -8,8 +14,8 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .content-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
+    background-color: #d8bf9f;
+    color: #131313;
     text-align: center;
     font-weight: bold;
 }
@@ -28,22 +34,18 @@
     border-bottom: 3px dashed #dbcaca;
 }
 
-.content-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-.content-table tbody tr:nth-of-type(odd) {
+.content-table tbody tr {
     background-color: #f3f3f3;
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #d8bf9f;
 }
 
 .content-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
+    color: #131313;
 }
-.titleList{
+.titleList {
     text-decoration: none;
     color: #615c5c;
     font-size: 30px;
@@ -51,14 +53,22 @@
 a:hover{
     text-decoration: none;
 }
-.nav{
-    border: 1px solid #0dcaf0;
-    background: #009879;
+.nav {
+    background: #d8bf9f;
     border-radius: 5px;
     justify-content: space-between;
+}
+.nav a {
+    margin: 20px 0;
+    background-color: white;
+    margin-left: 15px;
+    color: #131313;
 }
 #btnSearch{
     margin-right: 15px;
     background-color:white;
     color:#064f40
+}
+.pagination a {
+    color: black;
 }

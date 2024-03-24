@@ -1,31 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 body{
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
-.formAdd{
+.child-category-list {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 15px;
+}
+.formAdd {
     max-width: 550px;
     width: 100%;
     background: #fff;
-    margin: 50px auto;
-    box-shadow: 3px 3px 4px rgba(0,0,0,0.125);
-    padding: 30px;
+    margin: auto;
+    margin-bottom: 30px;
 }
-.formAdd .title{
-    font-size: 24px;
+.formAdd .title {
     font-weight: 700;
     margin-bottom: 25px;
-    color: #009879;
+    color: #d8bf9f;
     text-transform: uppercase;
     text-align: center;
     display: flex;
 }
-.tb{
+.detailsList .tb {
     color: #444;
     padding-left: 35px;
     margin: 10px 0 !important;
 }
-ul li {
+.detailsList ul li {
     list-style-type: circle;
 
 }
@@ -52,8 +53,8 @@ ul li {
     width: inherit;
 }
 .content-table-childCate thead tr {
-    background-color: #009879;
-    color: #ffffff;
+    background-color: #d8bf9f;
+    color: #131313;
     text-align: center;
     font-weight: bold;
 }
@@ -72,18 +73,17 @@ ul li {
     border-bottom: 3px dashed #dbcaca;
 }
 
-.content-table-childCate tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-.content-table-childCate tbody tr:nth-of-type(odd) {
+.content-table-childCate tbody tr {
     background-color: #f3f3f3;
 }
 
 .content-table-childCate tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #d8bf9f;
 }
 
 .content-table-childCate tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
+    color: #131313;
+}
+.pagination a {
+    color: black;
 }

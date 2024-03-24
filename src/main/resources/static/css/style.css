@@ -14,6 +14,19 @@ body {
   height:100%;
   background-color: #fff;
 }
+.bread-crumb {
+    background-color: #bbbbbb;
+    padding: 10px 0;
+    margin-bottom: 16px;
+}
+.bread-crumb a {
+    color: black;
+    text-decoration: none;
+}
+.bread-crumb a:hover {
+    color: white;
+    text-decoration: none;
+}
 .nav-one {
   background: #fff;
   width: 100%;
@@ -497,6 +510,21 @@ ul {
 }
 .min-vh-75 {
     min-height: 75vh !important;
+}
+.min-vh-65 {
+    min-height: 65vh !important;
+}
+.btn-checkout {
+    font-weight: bold!important;
+    background-color: #d8bf9f!important;
+}
+.btn-checkout-paypal {
+    font-weight: bold!important;
+    background-color: #0070ba!important;
+}
+.btn-checkout:hover, .btn-checkout-paypal:hover {
+    color: white!important;
+    background-color: #131313!important;
 }
 .jumbotron {
     margin-bottom: 30px;

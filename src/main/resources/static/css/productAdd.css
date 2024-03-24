@@ -1,22 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
-body{
+body {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
-.formAddPro{
+.formAddPro {
     max-width: 550px;
     width: 100%;
     background: #fff;
-    margin: 50px auto;
-    box-shadow: 3px 3px 4px rgba(0,0,0,0.125);
-    padding: 30px;
+    margin: auto;
 }
 
-.formAddPro .title{
+.formAddPro .title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
-    color: #009879;
+    color: #d8bf9f;
     text-transform: uppercase;
     text-align: center;
     display: flex;
@@ -58,28 +54,20 @@ body{
 .buttonProAdd button{
     width: 100%;
     padding: 8px 10px;
-    font-size: 16px;
+    font-weight: bold;
     border: 0px;
-    background: #009879;
-    color: #fff;
+    background: #d8bf9f;
+    color: #131313;
     cursor: pointer;
     border-radius: 3px;
     outline: none;
     margin-bottom: 15px;
     margin-top: 10px;
+    transition: all 0.3s ease;
 }
 .buttonProAdd button:hover{
-    background: #0fbf9b;
-    transform: scale(1.0);
-}
-#back{
-    border: 0px;
-    border-radius: 3px;
-    outline: none;
-    background: #009879;
-}
-#back:hover{
-    transform: scale(1.1);
+    background: #131313;
+    color: white;
 }
 .formAddPro .form .inputField .selection{
     position: relative;

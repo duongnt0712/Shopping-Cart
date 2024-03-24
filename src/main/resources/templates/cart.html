@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" layout:decorate="_layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <body layout:fragment="content" style="background: #f4f4f4">
-    <div class="container min-vh-100">
+    <div class="container min-vh-65">
         <section class="mt-5 mb-5">
             <div class="row">
                 <div class="col-lg-8">
@@ -20,7 +20,7 @@
 <!--                                            <p class="mb-2 text-uppercase small">Category: <span th:text="${item.category.name}"></span></p>-->
                                     </div>
                                     <div class="mt-5 d-flex justify-content-between align-items-center">
-                                        <a th:href="@{/cart/removeItem/{index}(index=${iState.index})}" type="button" class="card-link-secondary small text-uppercase mr-3">
+                                        <a th:href="@{/cart/removeItem/{index}(index=${iState.index})}" type="button" class="card-link-secondary small text-uppercase mr-3" style="color: #d8bf9f">
                                             <i class="fas fa-trash-alt mr-1"></i> Remove item
                                         </a>
                                         <strong>VND. <span th:text="${item.convert(item.price)}"></span></strong>
@@ -55,8 +55,7 @@
                                     <span><strong>VND. <span th:text="${total}"></span></strong></span>
                                 </li>
                             </ul>
-                            <a th:href="@{/checkout}" h class="btn btn-primary btn-block waves-effect waves-light">Go to
-                                Checkout</a>
+                            <a th:href="@{/checkout}" class="btn btn-block btn-checkout">Go to Checkout</a>
                         </div>
                     </div>
                 </div>

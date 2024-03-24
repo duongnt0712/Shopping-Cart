@@ -16,6 +16,10 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Page<Product> findByProductNameContaining (String productName, Pageable pageable);
     Page<Product> findAllByOrderByPriceAsc(Pageable pageable);
     Page<Product> findAllByOrderByPriceDesc(Pageable pageable);
+    Page<Product> findAllByOrderByProductNameAsc(Pageable pageable);
+    Page<Product> findAllByOrderByProductNameDesc(Pageable pageable);
+    Page<Product> findAllByOrderByColorAsc(Pageable pageable);
+    Page<Product> findAllByOrderByColorDesc(Pageable pageable);
     Page<Product> findBySubCategoryEquals(SubCategory subCategory, Pageable pageable);
     List<Product> findBySubCategoryEquals(SubCategory subCategory);
 }

@@ -1,13 +1,11 @@
 package se2project.controller;
 
-
 import se2project.model.MainCategory;
 import se2project.model.Product;
 import se2project.model.SubCategory;
 import se2project.repository.MainCategoryRepository;
 import se2project.repository.ProductRepository;
 import se2project.repository.SubCategoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -24,8 +22,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
-
-
 
 @Controller
 @RequestMapping(value = "/admin")
@@ -187,9 +183,8 @@ public class AdminController {
     }
 
     //Sort
-    @RequestMapping(value = "/product/sort/asc")
-    public String sortProductAsc(Model model,
-                                 @RequestParam(value = "page") Optional<Integer> p) {
+    @RequestMapping(value = "/product/sort/price/asc")
+    public String sortProductByPriceAsc(Model model, @RequestParam(value = "page") Optional<Integer> p) {
         Pageable pageable =  PageRequest.of(p.orElse(0), 10);
         Page<Product> page =productRepository.findAllByOrderByPriceAsc(pageable);
         model.addAttribute("products", page.getContent());
@@ -197,11 +192,46 @@ public class AdminController {
         return "productList";
     }
 
-    @RequestMapping(value = "/product/sort/desc")
-    public String sortProductDesc(Model model,
-                                  @RequestParam(value = "page") Optional<Integer> p) {
+    @RequestMapping(value = "/product/sort/price/desc")
+    public String sortProductByPriceDesc(Model model, @RequestParam(value = "page") Optional<Integer> p) {
         Pageable pageable =  PageRequest.of(p.orElse(0), 10);
         Page<Product> page =productRepository.findAllByOrderByPriceDesc(pageable);
+        model.addAttribute("products", page.getContent());
+        model.addAttribute("pagelist",page);
+        return "productList";
+    }
+
+    @RequestMapping(value = "/product/sort/name/asc")
+    public String sortProductByProductNameAsc(Model model, @RequestParam(value = "page") Optional<Integer> p) {
+        Pageable pageable =  PageRequest.of(p.orElse(0), 10);
+        Page<Product> page =productRepository.findAllByOrderByProductNameAsc(pageable);
+        model.addAttribute("products", page.getContent());
+        model.addAttribute("pagelist",page);
+        return "productList";
+    }
+
+    @RequestMapping(value = "/product/sort/name/desc")
+    public String sortProductByProductNameDesc(Model model, @RequestParam(value = "page") Optional<Integer> p) {
+        Pageable pageable =  PageRequest.of(p.orElse(0), 10);
+        Page<Product> page =productRepository.findAllByOrderByProductNameDesc(pageable);
+        model.addAttribute("products", page.getContent());
+        model.addAttribute("pagelist",page);
+        return "productList";
+    }
+
+    @RequestMapping(value = "/product/sort/color/asc")
+    public String sortProductByColorAsc(Model model, @RequestParam(value = "page") Optional<Integer> p) {
+        Pageable pageable =  PageRequest.of(p.orElse(0), 10);
+        Page<Product> page =productRepository.findAllByOrderByColorAsc(pageable);
+        model.addAttribute("products", page.getContent());
+        model.addAttribute("pagelist",page);
+        return "productList";
+    }
+
+    @RequestMapping(value = "/product/sort/color/desc")
+    public String sortProductByColorDesc(Model model, @RequestParam(value = "page") Optional<Integer> p) {
+        Pageable pageable =  PageRequest.of(p.orElse(0), 10);
+        Page<Product> page =productRepository.findAllByOrderByColorDesc(pageable);
         model.addAttribute("products", page.getContent());
         model.addAttribute("pagelist",page);
         return "productList";
@@ -247,7 +277,7 @@ public class AdminController {
         List<SubCategory> subCategoryList = subCategoryRepository.findAll();
         model.addAttribute("subCategoryList",subCategoryList);
         model.addAttribute(product);
-        return "productAdd";
+        return "productUpdate";
     }
 
     @RequestMapping(value = "/product/save")
