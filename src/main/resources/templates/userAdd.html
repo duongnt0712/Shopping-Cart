@@ -35,10 +35,10 @@
                         <input class="input" id="password" name="password" required th:field="*{password}" type="password">
                     </div>
                     <div class="inputField">
-                        <label>Role</label>
+                        <label for="roles">Role</label>
                         <div class="check-box" th:field="*{roles}">
                             <div class="d-flex pl-3" th:each="role : ${roleList}">
-                                <input class="form-check-input" name="role" required type="checkbox">
+                                <input class="form-check-input" id="roles" name="roles" required type="checkbox" th:value="${role.id}">
                                 <label class="form-check-label">[[${role.getName()}]]</label>
                             </div>
                         </div>

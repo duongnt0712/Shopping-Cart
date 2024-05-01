@@ -52,8 +52,12 @@
                             <label>Additional information</label>
                             <textarea class="input" type="text"></textarea>
                         </div>
-                        <button class="btn btn-block btn-checkout" type="submit">Pay With Card</button>
-                        <button class="btn btn-block btn-checkout-paypal" type="submit">Pay With Paypal</button>
+                        <div class="inputField" style="display: None;">
+                            <label for="amount">Amount</label>
+                            <input id="amount" name = "amount" class="input" type="text" th:value="${total}"></input>
+                        </div>
+                        <button class="btn btn-block btn-checkout" type="submit">Pay With Cash</button>
+                        <button class="btn btn-block btn-checkout-paypal" type="submit" th:formaction="@{/payment/create}">Pay With Paypal</button>
                     </form>
                 </div>
                 <div class="col-lg-4" id="bill">

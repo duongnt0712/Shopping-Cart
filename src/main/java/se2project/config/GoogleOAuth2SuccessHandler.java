@@ -1,5 +1,6 @@
 package se2project.config;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import se2project.repository.RoleRepository;
 import se2project.model.Role;
 import se2project.model.User;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class GoogleOAuth2SuccessHandler implements AuthenticationSuccessHandler {
@@ -27,6 +29,7 @@ public class GoogleOAuth2SuccessHandler implements AuthenticationSuccessHandler 
     @Autowired
     UserRepository userRepository;
 
+    BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) throws IOException, ServletException {
@@ -41,9 +44,11 @@ public class GoogleOAuth2SuccessHandler implements AuthenticationSuccessHandler 
 
         } else {
             User user = new User();
-            user.setFirstName(token.getPrincipal().getAttributes().get("given_name").toString());
-            user.setLastName(token.getPrincipal().getAttributes().get("family_name").toString());
+            Map<String, Object> attributes = token.getPrincipal().getAttributes();
+            user.setFirstName(attributes.get("given_name").toString());
+            user.setLastName((attributes.get("family_name") != null) ? attributes.get("family_name").toString() : "Unknown");
             user.setEmail(email);
+            user.setPassword(bCryptPasswordEncoder.encode("123456"));
             List<Role> roles = new ArrayList<>();
             roles.add(roleRepository.findById(2).get());
             user.setRoles(roles);

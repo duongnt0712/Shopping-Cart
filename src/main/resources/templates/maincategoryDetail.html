@@ -6,7 +6,10 @@
 <body layout:fragment="content" style="background: #f4f4f4;">
     <div class="min-vh-65">
         <section class="bread-crumb">
-            <div class="container">Home / Main Category List / Shirts</div>
+            <div class="container">
+                <span><a th:href="'/admin'">Home</a> / </span>
+                <span><a th:href="'/admin/maincategory'">Main Category List</a> / </span>
+                [[${mainCategory.name}]]</div>
         </section>
         <div class="container child-category-list">
             <div class="formAdd">
@@ -29,7 +32,7 @@
             </div>
         </div>
         <div class="container child-category-list">
-            <h2 class="mb-3" th:text="'Children Category List: ' +${mainCategory.name}"></h2>
+            <h2 class="mb-3">Children Category List</h2>
             <hr/>
             <table class="content-table-childCate">
                 <thead>

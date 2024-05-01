@@ -5,7 +5,10 @@
 </head>
 <body layout:fragment="content" style="background: #f4f4f4;">
     <section class="bread-crumb">
-        <div class="container">Home / Shop / All Product</div>
+        <div class="container">
+            <span><a th:href="'/'">Home</a> / </span>
+            <span><a th:href="'/shop'">Shop</a> / </span>
+            [[${cateName} != null ? ${cateName} : 'All Products']]</div>
     </section>
     <main class="container wrap-background" style="display: flex; justify-content: space-between;">
         <nav class="side-bar">
@@ -26,7 +29,7 @@
             </ul>
         </nav>
         <div class="allCard">
-            <h1 class="title-page">All Products</h1>
+            <h1 class="title-page" th:text="${cateName} != null ? ${cateName} : 'All Products'"></h1>
             <section class="row products-view-grid ">
                 <div class="col-4 card-product-wrapper" th:each="product : ${products}">
                     <div class="card card-product h-100 ">

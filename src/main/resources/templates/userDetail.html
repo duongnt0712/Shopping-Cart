@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="_layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <link rel="stylesheet" th:href="@{/css/productDetail.css}">
+</head>
+<body layout:fragment="content">
+    <section class="bread-crumb">
+        <div class="container">Home / Shop / Product</div>
+    </section>
+    <div class="container child-sub-category-list">
+        <div class="formAdd">
+            <h2 class="title">
+                <a th:href="'/admin/user/list'">
+                    <button class="btn btn-checkout" style="margin-right: 55px">Back</button>
+                </a>
+                USER DETAIL
+            </h2>
+            <div class="detailInfoList">
+                <ul class="tb">
+                    <li>
+                        <p><span style="font-size: 15px;" th:text="'ID: ' +${user.id}"></span></p>
+                    </li>
+                    <li>
+                        <p><span style="font-size: 15px;" th:text="'First Name: ' +${user.firstName}"></span></p>
+                    </li>
+                    <li>
+                        <p><span style="font-size: 15px;" th:text="'Last Name: ' +${user.lastName}"></span></p>
+                    </li>
+                    <li>
+                        <p><span style="font-size: 15px;" th:text="'Email: ' +${user.email}"></span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class=" container">
+        <div class="row detail">
+            <div class="image col-lg-6">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img th:src="@{${'/images/' + product.imageName}}" class="d-block w-100" alt="Product Images" style="height: 605px; width: 800px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info col-lg-6">
+                <p class="hot">HOT <i class="fa-brands fa-hotjar"></i></p>
+                <h2 th:text="${product.productName}"></h2>
+                <p th:text="${product.description}"></p>
+                <!-- avaiable -->
+                <div class="d-flex justify-content-between">
+                    <p class="stock"><i class="fa fa-check"></i> In Stock</p>
+                </div>
+                <!-- price -->
+                <div class="priceBox">
+                    <p class="amount" th:text="'Price: '+${product.convert(product.price)}+ '₫'" />
+                    <div class="textDiv d-flex">
+                        <span class="insurance">Insurance 18 months</span>
+                        <span class="vat">Price includes VAT</span>
+                    </div>
+                </div>
+                <!-- productinfo-->
+                <div class="product-info tbContainer">
+                    <strong>
+                        <i class="fa-solid fa-list" style="color: #cf0823; font-size: 18px; padding: 0px 5px"></i>Product Infomation:
+                    </strong>
+                    <ul class="tb">
+                        <li><p th:text="'Product Type: ' +${product.subCategory.mainCategory.name}"></p></li>
+                        <li><p th:text="'Brand: ' +${product.subCategory.name}"></p></li>
+                        <li><p th:text="'Color: ' +${product.color} "></p></li>
+                    </ul>
+                </div>
+                <!-- promotional -->
+                <div class="promotional tbContainer">
+                    <p>
+                        <strong><i class="fa-solid fa-gift" style="color: #cf0823; font-size: 18px; padding: 0px 5px"></i>Promotional:</strong>
+                    </p>
+                    <ul class="tb">
+                        <li><p>Free Ship Nationwide</p></li>
+                        <li><p>Fast Ship 2h in Hanoi & HCM</p></li>
+                        <li><p>Vouncher from 50,000đ to 500,000đ for next buy</p></li>
+                    </ul>
+                </div>
+                <!-- buy -->
+                <div class="inputNumber">
+                    <button class="btn btnCart">
+                        <a th:href="@{/addToCart/{id}(id = ${product.productId})}">Buy Now <i class="fas fa-cart-plus"> </i></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
