@@ -1,4 +1,4 @@
-package group1.se2project;
+package se2project;
 
 import se2project.model.Role;
 import se2project.model.User;
@@ -35,9 +35,9 @@ public class UserRepositoryTest {
         List<Role> roles = new ArrayList<>();
         roles.add(roleRepository.findById(2).get());
         User user = new User();
-        user.setFirstName("Vu Anh");
-        user.setLastName("Nguyen");
-        user.setEmail("vuanh@gmail.com");
+        user.setFirstName("Thuy Tien");
+        user.setLastName("Vu");
+        user.setEmail("vuthuytien@gmail.com");
         user.setPassword("123456");
         user.setRoles(roles);
 

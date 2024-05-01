@@ -1,4 +1,4 @@
-package group1.se2project;
+package se2project;
 
 
 import se2project.model.MainCategory;

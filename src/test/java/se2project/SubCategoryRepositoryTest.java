@@ -1,4 +1,4 @@
-package group1.se2project;
+package se2project;
 
 
 import se2project.model.SubCategory;
@@ -31,11 +31,6 @@ public class SubCategoryRepositoryTest {
     public void TestListAll(){
         List<SubCategory> subCategories = repos.findAll();
         Assertions.assertTrue(subCategories.size() >0);
-        for (SubCategory subcat:subCategories
-        ) {
-            System.out.println(subcat);
-
-        }
     }
     @Test
     public void TestUpdate() {
